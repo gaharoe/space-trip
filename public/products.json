@@ -8,7 +8,7 @@
                 "description": "Kaos dengan bahan adem, cocok digunakan saat beraktivitas diluar, memberikan sentuhan nyaman pada tubuh dan tidak menyebabkan panas",
                 "price": "150000",
                 "category": "T-Shirt",
-                "image": "http://192.168.43.161:3000/t-shirt-1.png",
+                "image": "/t-shirt-1.png",
                 "sizes" : ["XL", "L", "M", "S"]
             },
             {
@@ -17,7 +17,7 @@
                 "description": "Kaos dengan bahan adem, cocok digunakan saat beraktivitas diluar, memberikan sentuhan nyaman pada tubuh dan tidak menyebabkan panas",
                 "price": "150000",
                 "category": "T-Shirt",
-                "image": "http://192.168.43.161:3000/t-shirt-2.png",
+                "image": "/t-shirt-2.png",
                 "sizes" : ["XL", "L", "M", "S"]
             },
             {
@@ -26,7 +26,7 @@
                 "description": "Kaos dengan bahan adem, cocok digunakan saat beraktivitas diluar, memberikan sentuhan nyaman pada tubuh dan tidak menyebabkan panas",
                 "price": "150000",
                 "category": "T-Shirt",
-                "image": "http://192.168.43.161:3000/t-shirt-3.png",
+                "image": "/t-shirt-3.png",
                 "sizes" : ["XL", "L", "M", "S"]
             },
             {
@@ -35,7 +35,7 @@
                 "description": "Kaos dengan bahan adem, cocok digunakan saat beraktivitas diluar, memberikan sentuhan nyaman pada tubuh dan tidak menyebabkan panas",
                 "price": "150000",
                 "category": "T-Shirt",
-                "image": "http://192.168.43.161:3000/t-shirt-4.png",
+                "image": "/t-shirt-4.png",
                 "sizes" : ["XL", "L", "M", "S"]
             }
         ]
@@ -49,7 +49,7 @@
                 "description": "Celana jeans hitam tebal cocok digunakan untuk kalangan muda, celana yang cocok juga untuk acara formal",
                 "price": "150000",
                 "category": "Jeans",
-                "image": "http://192.168.43.161:3000/jeans-1.png",
+                "image": "/jeans-1.png",
                 "sizes" : ["XL", "L", "M", "S"]
             },
             {
@@ -58,7 +58,7 @@
                 "description": "Celana jeans hitam tebal cocok digunakan untuk kalangan muda, celana yang cocok juga untuk acara formal",
                 "price": "150000",
                 "category": "Jeans",
-                "image": "http://192.168.43.161:3000/jeans-2.png",
+                "image": "/jeans-2.png",
                 "sizes" : ["XL", "L", "M", "S"]
             },
             {
@@ -67,7 +67,7 @@
                 "description": "Celana jeans hitam tebal cocok digunakan untuk kalangan muda, celana yang cocok juga untuk acara formal",
                 "price": "150000",
                 "category": "Jeans",
-                "image": "http://192.168.43.161:3000/jeans-3.png",
+                "image": "/jeans-3.png",
                 "sizes" : ["XL", "L", "M", "S"]
             },
             {
@@ -76,7 +76,7 @@
                 "description": "Celana jeans hitam tebal cocok digunakan untuk kalangan muda, celana yang cocok juga untuk acara formal",
                 "price": "150000",
                 "category": "Jeans",
-                "image": "http://192.168.43.161:3000/jeans-4.png",
+                "image": "/jeans-4.png",
                 "sizes" : ["XL", "L", "M", "S"]
             }
         ]
