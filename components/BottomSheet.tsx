@@ -1,10 +1,11 @@
 "use client"
 
 import { Product } from "@/types/types"
-import { Minus, Plus, SeparatorHorizontal, X } from "lucide-react"
+import { LoaderCircle, Minus, Plus, SeparatorHorizontal, X } from "lucide-react"
 import { Zalando_Sans } from "next/font/google"
 import { useEffect, useState } from "react"
 import SizeOptions from "./SizeOptions"
+import LoaderCircleBar from "./LoaderCircleBar"
 
 const zalando = Zalando_Sans({
     display: "swap"
@@ -17,7 +18,8 @@ export default function BottomSheet(
 ){
 
     const [visible, setVisible] = useState<boolean>(false)
-    const [qty, setQty] = useState<number>(0)
+    const [qty, setQty] = useState<number>(1)
+    const [buttonCartLoading, setButtonCartLoading] = useState<boolean>(false)
 
     useEffect(() => {
         if(isOpen) {
@@ -28,14 +30,47 @@ export default function BottomSheet(
         }
     }, [isOpen])
 
+    function closeSheet(){
+        setVisible(false)
+        setTimeout(() => {onClose(false)}, 300)
+    }
+
+    async function addCart(){
+        if(!data?.size){
+            alert("pilih ukuran terlebih dahulu")
+            return
+        }
+        
+        if(qty < 1){
+            alert("tentukan jumlah product")
+            return
+        }
+        setButtonCartLoading(true)
+        const sendCartData = await fetch("/api/user/cart", {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application"
+            },
+            body: JSON.stringify({...data, qty})
+        })
+        const result = await sendCartData.json()
+        
+        setButtonCartLoading(false)
+        if(result.success){
+            closeSheet()
+            alert(result.msg)
+        } else {
+            alert("gagal")
+        }
+        
+    }
+
+
     if(!isOpen && !visible) {return null}
 
     return (
         <div className={`fixed top-0 bottom-0 left-0 right-0 transition-all duration-300 text-black ${zalando.className} ${visible ? "bg-black/30" : "bg-black/0"}`}
-            onClick={() => {
-                setVisible(false) 
-                setTimeout(() => {onClose(false)}, 300)}
-            }
+            onClick={() => closeSheet()}
             >
             <div className={`flex flex-col gap-4 p-5 h-100 rounded-t-3xl fixed z-40 bottom-0 right-0 left-0 transition-all duration-300 bg-white shadow-xl ${visible ? "mb-0" : "-mb-100"}`} onClick={(e) => {e.stopPropagation()}}>
                 <button className="w-full flex justify-center opacity-55" onClick={() => {
@@ -64,11 +99,17 @@ export default function BottomSheet(
                                 <SizeOptions sizes={data.sizes} selected={data.size} selectSize={data.setSize}/>
                             </div>
                             <div className="flex w-full justify-center items-center gap-5 text-white">
-                                <button onClick={() => setQty(prev => prev > 0 ? prev-1 : prev)} className="w-8 h-8 rounded-full flex justify-center items-center bg-black"><Minus/></button>
+                                <button onClick={() => setQty(prev => prev > 0 ? prev-1 : prev)} className="w-7 h-7 rounded-full flex justify-center items-center bg-black"><Minus/></button>
                                 <p className="font-bold text-black text-3xl">{qty}</p>
-                                <button onClick={() => setQty(prev => prev+1)} className="w-8 h-8 rounded-full flex justify-center items-center bg-black"><Plus/></button>
+                                <button onClick={() => setQty(prev => prev+1)} className="w-7 h-7 rounded-full flex justify-center items-center bg-black"><Plus/></button>
                             </div>
-                            <button onClick={() => alert(`${data.name}, ${data.price}, ${data.size}, ${qty}`)} className="bg-black w-full h-15 rounded-lg flex justify-center items-center text-white active:bg-black/90">+ Add to cart</button>
+                            <button onClick={() => addCart()} disabled={false} className="bg-black w-full h-15 rounded-lg flex justify-center items-center text-white active:bg-black/90 relative">
+                                {buttonCartLoading ? (
+                                    <LoaderCircleBar />
+                                ) : (
+                                    <p>+ Add to cart</p>
+                                )}
+                            </button>
                         </div>
                     </div>
                 )}
