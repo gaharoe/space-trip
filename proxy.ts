@@ -20,5 +20,7 @@ export function proxy(request: NextRequest){
 }
 
 export const config = {
-    matcher: ["/((?!api|_next|favicon.ico).*)"]
+    // matcher: ["/", "/product", "/product/:path*" ,"/about", "/contact"]
+    matcher: ["/admin"]
+    // matcher: ["/((?!api|_next|favicon.ico).*)"]
 }
