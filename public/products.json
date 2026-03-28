@@ -1,0 +1,84 @@
+[
+    {
+        "category": "T-Shirt",
+        "product" : [
+            {
+                "id": 5,
+                "name": "T-Shirt Model 1",
+                "description": "Kaos dengan bahan adem, cocok digunakan saat beraktivitas diluar, memberikan sentuhan nyaman pada tubuh dan tidak menyebabkan panas",
+                "price": "150000",
+                "category": "T-Shirt",
+                "image": "http://192.168.43.161:3000/t-shirt-1.png",
+                "sizes" : ["XL", "L", "M", "S"]
+            },
+            {
+                "id": 6,
+                "name": "T-Shirt Model 2",
+                "description": "Kaos dengan bahan adem, cocok digunakan saat beraktivitas diluar, memberikan sentuhan nyaman pada tubuh dan tidak menyebabkan panas",
+                "price": "150000",
+                "category": "T-Shirt",
+                "image": "http://192.168.43.161:3000/t-shirt-2.png",
+                "sizes" : ["XL", "L", "M", "S"]
+            },
+            {
+                "id": 7,
+                "name": "T-Shirt Model 3",
+                "description": "Kaos dengan bahan adem, cocok digunakan saat beraktivitas diluar, memberikan sentuhan nyaman pada tubuh dan tidak menyebabkan panas",
+                "price": "150000",
+                "category": "T-Shirt",
+                "image": "http://192.168.43.161:3000/t-shirt-3.png",
+                "sizes" : ["XL", "L", "M", "S"]
+            },
+            {
+                "id": 8,
+                "name": "T-Shirt Model 4",
+                "description": "Kaos dengan bahan adem, cocok digunakan saat beraktivitas diluar, memberikan sentuhan nyaman pada tubuh dan tidak menyebabkan panas",
+                "price": "150000",
+                "category": "T-Shirt",
+                "image": "http://192.168.43.161:3000/t-shirt-4.png",
+                "sizes" : ["XL", "L", "M", "S"]
+            }
+        ]
+    },
+    {
+        "category": "Jeans",
+        "product": [
+            {
+                "id": 1,
+                "name": "Jeans Model 1",
+                "description": "Celana jeans hitam tebal cocok digunakan untuk kalangan muda, celana yang cocok juga untuk acara formal",
+                "price": "150000",
+                "category": "Jeans",
+                "image": "http://192.168.43.161:3000/jeans-1.png",
+                "sizes" : ["XL", "L", "M", "S"]
+            },
+            {
+                "id": 2,
+                "name": "Jeans Model 2",
+                "description": "Celana jeans hitam tebal cocok digunakan untuk kalangan muda, celana yang cocok juga untuk acara formal",
+                "price": "150000",
+                "category": "Jeans",
+                "image": "http://192.168.43.161:3000/jeans-2.png",
+                "sizes" : ["XL", "L", "M", "S"]
+            },
+            {
+                "id": 3,
+                "name": "Jeans Model 3",
+                "description": "Celana jeans hitam tebal cocok digunakan untuk kalangan muda, celana yang cocok juga untuk acara formal",
+                "price": "150000",
+                "category": "Jeans",
+                "image": "http://192.168.43.161:3000/jeans-3.png",
+                "sizes" : ["XL", "L", "M", "S"]
+            },
+            {
+                "id": 4,
+                "name": "Jeans Model 4",
+                "description": "Celana jeans hitam tebal cocok digunakan untuk kalangan muda, celana yang cocok juga untuk acara formal",
+                "price": "150000",
+                "category": "Jeans",
+                "image": "http://192.168.43.161:3000/jeans-4.png",
+                "sizes" : ["XL", "L", "M", "S"]
+            }
+        ]
+    }
+]
