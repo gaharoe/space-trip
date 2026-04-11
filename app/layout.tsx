@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import { UserPovider } from "@/contexts/UserContext";
+import BottomNav from "@/components/ButtomNav";
 
 
 export const metadata: Metadata = {
@@ -21,7 +22,8 @@ export default function RootLayout({
     >
       <UserPovider>
         <body>
-          <Header/>
+          <Header />
+          <BottomNav />
           <main className="bg-white">
             {children}
           </main>
